@@ -5,7 +5,9 @@ description = "영화진흥위원회 API 사용 => 영화순위 데이터 처리
 authors = [
     {name = "rlaehgus97", email = "starkim625@gmail.com"},
 ]
-dependencies = []
+dependencies = [
+    "requests>=2.32.3",
+]
 requires-python = ">=3.9"  # "==3.11.*" 원래는 이렇게 되어있는데 바꿈
 readme = "README.md"
 license = {text = "MIT"}

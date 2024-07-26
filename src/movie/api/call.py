@@ -8,5 +8,5 @@ def gen_url(dt="20120101"):
     return url
 
 def req():
-    print("req")
+    print("request")
 

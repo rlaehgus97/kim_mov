@@ -12,10 +12,10 @@ license = {text = "MIT"}
 
 
 [tool.pdm]
-distribution = false
+distribution = true 
 
-[projcet.script]
-movie-ping = 'movie.cli:ping' 
+[project.scripts]
+mov-ping = 'movie.cli:ping' 
 
 [project.urls]
 Homepage = "https://github.com/rlaehgus97/kim_mov"

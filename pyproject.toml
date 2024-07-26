@@ -1,15 +1,24 @@
 [project]
 name = "movie"
-version = "0.1.0"
-description = "Default template for PDM package"
+version = "0.2.0"
+description = "영화진흥위원회 API 사용 => 영화순위 데이터 처리"
 authors = [
     {name = "rlaehgus97", email = "starkim625@gmail.com"},
 ]
 dependencies = []
-requires-python = "==3.11.*"
+requires-python = ">=3.9"  # "==3.11.*" 원래는 이렇게 되어있는데 바꿈
 readme = "README.md"
 license = {text = "MIT"}
 
 
 [tool.pdm]
 distribution = false
+
+[projcet.script]
+movie-ping = 'movie.cli:ping' 
+
+[project.urls]
+Homepage = "https://github.com/rlaehgus97/kim_mov"
+Issues = "https://github.com/rlaehgus97/kim_mov/issues"
+
+

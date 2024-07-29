@@ -1,6 +1,6 @@
 [project]
 name = "movie"
-version = "0.2.0"
+version = "0.2.1"
 description = "영화진흥위원회 API 사용 => 영화순위 데이터 처리"
 authors = [
     {name = "rlaehgus97", email = "starkim625@gmail.com"},

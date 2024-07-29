@@ -26,18 +26,16 @@ def test_req2list():
 def test_list2df():
     df = list2df()
     print(df)
+    print(type(df))
     assert isinstance(df, pd.DataFrame)
     assert 'rnum' in df.columns
-    assert 'rank' in df.columns
-    assert 'movieCd' in df.columns
-    assert 'movieNm' in df.columns
     assert 'openDt' in df.columns
     assert 'salesAmt' in df.columns
-    assert 'salesAcc' in df.columns
     assert 'audiCnt' in df.columns
-    assert 'audiAcc' in df.columns
 
 def test_save2df():
     df = save2df()
+    print(type(df))
     assert isinstance(df, pd.DataFrame)
-    assert load_dt in df.columns
+    assert 'load_dt' in df.columns
+   

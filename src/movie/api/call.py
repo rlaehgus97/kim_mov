@@ -37,7 +37,7 @@ def list2df(load_dt='20120101'):
 def save2df(load_dt='20120101'):
     df = list2df(load_dt)
     # df에 load_dt column 추가 (조회 일자 YYYYMMDD 형식으로)
-    df['load_dt'] = '20120101' #pd.Timestamp.today().strftime('%Y%m%d')
+    df['load_dt'] = load_dt #pd.Timestamp.today().strftime('%Y%m%d')
     print(df.head(5))
     # 아래 파일 저장시 load_dt 기본으로 partitioning
     df.to_parquet('~/tmp/test_parquet', partition_cols=['load_dt'])

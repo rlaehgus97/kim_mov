@@ -1,6 +1,6 @@
 import requests
 import os    # used for get key method to conceal key value, attain key value from server
-#import pandas as pd
+import pandas as pd
 
 def get_key():
     key = os.getenv('MOVIE_API_KEY')
@@ -23,9 +23,14 @@ def req(dt="20120101"):
     #print(data)
     return code, data
 
-def req2dataframe():
+def req2list():
     _, data = req()
     l = data['boxOfficeResult']['dailyBoxOfficeList']
+    
     return l
 
-print(req2dataframe())
+def list2df():
+    l = req2list()
+    df = pd.DataFrame(l)
+
+    return df

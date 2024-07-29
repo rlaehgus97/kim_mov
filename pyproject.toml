@@ -9,6 +9,7 @@ dependencies = [
     "requests>=2.32.3",
     "pandas>=2.2.2",
     "numpy>=2.0.1",
+    "pyarrow>=17.0.0",
 ]
 requires-python = ">=3.9"  # "==3.11.*" 원래는 이렇게 되어있는데 바꿈
 readme = "README.md"

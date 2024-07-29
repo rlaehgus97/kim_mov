@@ -1,4 +1,4 @@
-from movie.api.call import gen_url, req, get_key, req2list, list2df
+from movie.api.call import gen_url, req, get_key, req2list, list2df, save2df
 import pandas as pd 
 
 def test_get_key():
@@ -36,3 +36,8 @@ def test_list2df():
     assert 'salesAcc' in df.columns
     assert 'audiCnt' in df.columns
     assert 'audiAcc' in df.columns
+
+def test_save2df():
+    df = save2df()
+    assert isinstance(df, pd.DataFrame)
+    assert load_dt in df.columns

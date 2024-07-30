@@ -44,5 +44,15 @@ def save2df(load_dt='20120101'):
 
     return df
 
+def apply_type2df(load_dt="20120101", path="~/tmp/test_parquet"):
+    df = pd.read_parquet(f'{path}/load_dt={load_dt}')
+    # df['rnum'] = pd.to_numeric(df['rnum'])
+    num_cols = ['rnum', 'rank', 'rankInten', 'salesAmt', 'audiCnt', 'audiAcc', 'scrnCnt', 'showCnt', 'salesShare', 'salesInten', 'salesChange', 'audiInten', 'audiChange']
+
+    for c in num_cols:
+        df[c] = pd.to_numeric(df[c])   #string => numeric(float), which enables to derive statistics like avg, std ...
+        # df[c] = df[c].apply(pd.to_numeric)
+    return df
+
 def echo(yaho):
     return yaho

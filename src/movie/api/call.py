@@ -29,7 +29,7 @@ def req2list(load_dt='20120101') -> list:
     return l
 
 def list2df(load_dt='20120101'):
-    l = req2list(load_Dt)
+    l = req2list(load_dt)
     df = pd.DataFrame(l)
 
     return df

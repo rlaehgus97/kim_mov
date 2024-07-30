@@ -1,4 +1,4 @@
-from movie.api.call import gen_url, req, get_key, req2list, list2df, save2df
+from movie.api.call import gen_url, req, get_key, req2list, list2df, save2df, echo
 import pandas as pd 
 
 def test_get_key():
@@ -39,3 +39,6 @@ def test_save2df():
     assert isinstance(df, pd.DataFrame)
     assert 'load_dt' in df.columns
    
+def test_echo():
+    r = echo("hello")
+    assert r == "hello"

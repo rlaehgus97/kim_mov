@@ -4,10 +4,11 @@
 ```
 $ git clone <URL>
 $ cd <DIRECTORY>
+$ source .venv/bin/activate
+$ pytest
 
 # option
 $ pdm venv create
-$ source .venv/bin/activate
 ```
 ### how to install
 ```
